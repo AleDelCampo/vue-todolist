@@ -28,7 +28,7 @@
                     {{ currentToDo.text }}
                     </span>
 
-                    <i class="fa-regular fa-circle-check"></i>  
+                    <i @click="deleteToDo(index)" class="fa-solid fa-square-xmark"></i>
                 </li>
             </ul>
 
