@@ -32,6 +32,26 @@
                 </li>
             </ul>
 
+            <div class="py-4 ">
+                <div class="input-group mb-4">
+                    <span class="input-group-text">Nuova Missione:</span>
+                    <input 
+                        v-model="this.missedToDo"
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Qual'è la prossima missione??" >
+
+                    <button 
+                        class="btn btn-outline-secondary" 
+                        type="button" 
+                        @click="addToDo()">
+                        
+                        +
+                        
+                    </button>
+                </div>
+            </div>
+
         </div>
 
     </div>

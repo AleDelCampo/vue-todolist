@@ -2,12 +2,6 @@
 DONE:
 (true = è stata fatta)
 (false = da fare)
-
-MILESTONE 3
-Predisporre un campo di input testuale e un pulsante "aggiungi": 
-cliccando sul pulsante, il testo digitato viene letto e utilizzato
-per creare un nuovo todo, che quindi viene aggiunto alla lista dei 
-todo esistenti.
 Bonus:
 1- oltre al click sul pulsante per la aggiunta del task, 
 intercettare anche il tasto ENTER per aggiungere il todo alla 
@@ -19,6 +13,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            missedToDo: '',
+
             toDoList: [
                 {
                     text: 'Comprare farina',
@@ -43,6 +39,16 @@ createApp({
     methods: {
         deleteToDo(toDoIndex) {
             this.toDoList.splice(toDoIndex, 1);
+        },
+
+        addToDo() {
+            this.toDoList.push(
+                {
+                text: this.missedToDo,
+                done: 'false'
+            });
+            
+            this.missedToDo = '';
         },
     },
 }).mount("#app");
