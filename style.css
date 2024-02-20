@@ -2,4 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: bold;
+}
+
+body {
+    background-color: burlywood;
+}
+
+.fa-square-xmark {
+    color: green;
+    font-size: 24px;
+}
+
+#plus {
+    font-size: 24px;
+}
+
+#label {
+    font-size: 24px;
 }
