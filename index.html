@@ -24,7 +24,8 @@
                 class="list-group">
                 <li v-for="(currentToDo, index) in toDoList"
                     class="list-group-item d-flex justify-content-between align-items-center">
-                    <span :class="currentToDo.done == 'true' ? 'text-decoration-line-through' : ''">
+                    <span :class="currentToDo.done == 'true' ? 'text-decoration-line-through' : ''"
+                    @click="trueOrFalse(index)">
                     {{ currentToDo.text }}
                     </span>
 
@@ -39,7 +40,8 @@
                         v-model="this.missedToDo"
                         type="text" 
                         class="form-control" 
-                        placeholder="Qual'è la prossima missione??" >
+                        placeholder="Qual'è la prossima missione??"
+                        @keydown.enter="addToDo">
 
                     <button 
                         class="btn btn-outline-secondary" 

@@ -1,12 +1,4 @@
-/*Descrizione:
-DONE:
-(true = è stata fatta)
-(false = da fare)
-Bonus:
-1- oltre al click sul pulsante per la aggiunta del task, 
-intercettare anche il tasto ENTER per aggiungere il todo alla 
-lista
-2- cliccando sul testo dell'item, invertire il valore della 
+/*2- cliccando sul testo dell'item, invertire il valore della 
 proprietà done del todo corrispondente (se done era uguale 
 a false, impostare true e viceversa)*/
 const { createApp } = Vue;
@@ -47,8 +39,12 @@ createApp({
                 text: this.missedToDo,
                 done: 'false'
             });
-            
+
             this.missedToDo = '';
+        },
+
+        trueOrFalse(index) {
+            this.toDoList[index].done = this.toDoList[index].done === 'true' ? 'false' : 'true';
         },
     },
 }).mount("#app");
