@@ -34,6 +34,7 @@ createApp({
         },
 
         addToDo() {
+            if (this.missedToDo.trim() !== '') {
             this.toDoList.push(
                 {
                 text: this.missedToDo,
@@ -41,7 +42,7 @@ createApp({
             });
 
             this.missedToDo = '';
-        },
+        }},
 
         trueOrFalse(index) {
             this.toDoList[index].done = this.toDoList[index].done === 'true' ? 'false' : 'true';
