@@ -24,12 +24,12 @@
                 class="list-group">
                 <li v-for="(currentToDo, index) in toDoList"
                     class="list-group-item d-flex justify-content-between align-items-center">
-                    <span :class="currentToDo.done == 'true' ? 'text-decoration-line-through' : ''"
+                    <span class="todo" :class="currentToDo.done == 'true' ? 'text-decoration-line-through' : ''"
                     @click="trueOrFalse(index)">
                     {{ currentToDo.text }}
                     </span>
 
-                    <i @click="deleteToDo(index)" class="fa-solid fa-square-xmark"></i>
+                    <i @click="deleteToDo(index)" class="fa-solid fa-square-xmark todo"></i>
                 </li>
             </ul>
 
